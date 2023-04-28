@@ -1,3 +1,30 @@
-<p>
-  vehicle-list works!
-</p>
+<div class="container-fluid">
+  <div class="col-6">
+    <table class="table">
+      <thead>
+        <tr>
+          <th class="h4">#</th>
+          <th class="h4">Marca</th>
+          <th class="h4">Línea</th>
+          <th class="h4">Modelo</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let v of vehicles">
+          <td>
+            <dd>{{v.id}}</dd>
+          </td>
+          <td>
+            <dd>{{v.marca}}</dd>
+          </td>
+          <td>
+            <dd>{{v.linea}}</dd>
+          </td>
+          <td>
+            <dd>{{v.modelo}}</dd>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
