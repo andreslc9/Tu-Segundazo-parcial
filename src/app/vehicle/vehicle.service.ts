@@ -15,5 +15,4 @@ export class VehicleService {
     return this.http.get<Vehicle[]>(this.apiUrl);
   }
 
-
 }
