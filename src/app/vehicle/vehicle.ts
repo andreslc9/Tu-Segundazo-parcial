@@ -4,11 +4,11 @@ export class Vehicle {
   linea: string;
   referencia: string;
   modelo: string;
-  kilometraje: string;
+  kilometraje: number;
   color: string;
   imagen: string;
 
-  public constructor(id:number, marca: string, linea: string, referencia: string, modelo: string, kilometraje: string, color: string, imagen: string) {
+  public constructor(id:number, marca: string, linea: string, referencia: string, modelo: string, kilometraje: number, color: string, imagen: string) {
     this.id = id;
     this.marca = marca;
     this.linea = linea;

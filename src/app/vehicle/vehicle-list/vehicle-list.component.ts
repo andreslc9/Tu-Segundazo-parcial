@@ -14,9 +14,9 @@ export class VehicleListComponent implements OnInit {
 
   constructor(private vehicleService: VehicleService) { }
 
-  vehicles: Array<Vehicle>;
-  brands: Array<Brand>;
-  elements: Array<Brand>;
+  vehicles: Array<Vehicle> = [];
+  brands: Array<Brand> = [];
+  elements: Array<Brand> = [];
   quantity: [];
 
   orderAsc() {
@@ -25,7 +25,7 @@ export class VehicleListComponent implements OnInit {
       var textB = b.marca;
       return (textA < textB) ? -1 : (textA > textB) ? 1 : 0;
     });
-    console.log(this.brands)
+    console.log(this.brands);
   }
 
   getVehicles() {
@@ -47,14 +47,13 @@ export class VehicleListComponent implements OnInit {
         }
       }
       this.elements = uniqueElements.map(x => ({ marca: x.marca, quantity: x.quantity }));
-      console.log(this.elements)
+      console.log(this.elements);
     });
 
   }
 
   ngOnInit() {
     this.getVehicles();
-
   }
 
 }
